@@ -56,6 +56,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             //opciones tab_menu
             R.id.menu_home -> {
                 fragmentShow(home())
+                var hola = "hola"
             }
             R.id.Listas -> {
                 fragmentShow(listas())
