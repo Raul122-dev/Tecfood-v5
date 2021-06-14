@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200sp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_prueba"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#80000000">
+
+        <ImageView
+            android:id="@+id/img_fondo"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:src="@drawable/ic_baseline_apps_24"/>
+
+        <TextView
+            android:id="@+id/txt_name_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tipo_Menu"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

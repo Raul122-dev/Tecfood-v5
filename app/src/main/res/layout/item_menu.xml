@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120sp"
+        android:elevation="150sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10sp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15sp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="10sp">
+
+            <TextView
+                android:id="@+id/t1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="5sp"
+                android:text="Menu numero"
+                android:textColor="#000"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/te1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/t1"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="3sp"
+                android:text="Restaurant: La Caleta"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/precio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/te1"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="3sp"
+                android:text="Precio: 12.00"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+
+            <ImageView
+                android:id="@+id/img_delivery"
+                android:layout_width="40sp"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@id/te1"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="150dp"
+                android:layout_marginBottom="12dp"
+                android:maxHeight="30sp"
+                android:src="@drawable/ic_launcher_background" />
+
+            <ImageView
+                android:id="@+id/img_plato"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_alignParentRight="true"
+                android:maxHeight="150sp"
+                android:src="@drawable/ic_launcher_background" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

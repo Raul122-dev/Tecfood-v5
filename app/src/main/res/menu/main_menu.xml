@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_home"
+        android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24" />
+
+    <item android:id="@+id/Listas"
+        android:title="Listas"
+        android:icon="@drawable/ic_baseline_bookmark_24" />
+
+    <item android:id="@+id/Explorar"
+        android:title="Explorar"
+        android:icon="@drawable/ic_baseline_apps_24" />
+
+    <item android:id="@+id/Mas"
+        android:title="Mas"
+        android:icon="@drawable/ic_baseline_read_more_24" />
+
+    <item android:id="@+id/Preferencias"
+        android:title="Preferencias"
+        android:icon="@drawable/ic_baseline_account_box_24" />
+
+</menu>

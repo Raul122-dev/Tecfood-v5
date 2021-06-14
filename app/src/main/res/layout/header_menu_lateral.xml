@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200sp">
+
+    <ImageView
+        android:id="@+id/fondoBanerMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/wallpaper1"/>
+
+    <io.alterac.blurkit.BlurLayout
+        android:id="@+id/blur_fondo"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+    </io.alterac.blurkit.BlurLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"
+            app:civ_border_color="@color/principal"
+            app:civ_border_width="1sp"
+            android:layout_marginEnd="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:text="User"
+            android:textFontWeight="1730"
+            android:textColor="@color/white"
+            android:shadowColor="@color/black"
+            android:shadowRadius="20"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14sp"
+            android:layout_marginStart="24sp"
+            android:layout_marginEnd="24sp"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textColor="@color/white"
+            android:text="informacion adicional"
+            android:textSize="15sp"
+            android:shadowColor="@color/black"
+            android:shadowRadius="20"
+            android:textFontWeight="1000"/>
+    </LinearLayout>
+
+</RelativeLayout>

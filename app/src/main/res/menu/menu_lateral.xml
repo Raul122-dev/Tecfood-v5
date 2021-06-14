@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/item_general"
+            android:title="GENERAL">
+            <menu>
+                <item
+                    android:id="@+id/invitacion"
+                    android:title="Invita a tus amigos"/>
+                <item
+                    android:id="@+id/premiun"
+                    android:title="Haste Premiun" />
+            </menu>
+        </item>
+    </group>
+
+    <group
+        android:id="@+id/grupo2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/itemMisPromociones"
+            android:title="MIS PROMOCIONES">
+            <menu>
+                <item
+                    android:id="@+id/menuDireccion"
+                    android:icon="@android:drawable/ic_menu_directions"
+                    android:title="Direccion" />
+                <item
+                    android:id="@+id/menuMisNotificaciones"
+                    android:icon="@android:drawable/ic_notification_clear_all"
+                    android:title="Mis Notificaciones" />
+            </menu>
+        </item>
+    </group>
+    <group
+        android:id="@+id/grupo3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/itemInformacion"
+            android:title="INFORMACION" >
+            <menu>
+                <item
+                    android:id="@+id/menuHacerseMiembro"
+                    android:icon="@android:drawable/ic_menu_agenda"
+                    android:title="Hacerte Miembro" />
+                <item
+                    android:id="@+id/menuAfiliarRestaurante"
+                    android:icon="@android:drawable/ic_menu_add"
+                    android:title="Afiliar Restaurante" />
+                <item
+                    android:id="@+id/menuAcercaDeTecFood"
+                    android:icon="@android:drawable/ic_menu_help"
+                    android:title="Acerca de TecFood" />
+                <item
+                    android:id="@+id/menuSalirAplicacion"
+                    android:icon="@android:drawable/ic_lock_power_off"
+                    android:title="Serrar Sesion" />
+            </menu>
+        </item>
+    </group>
+</menu>

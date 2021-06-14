@@ -1,0 +1,2 @@
+rootProject.name = "Tecfoodv5"
+include ':app'

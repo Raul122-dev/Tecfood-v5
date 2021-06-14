@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/teal_200</item>
+        <item name="colorButtonNormal">@color/naranja</item>
+    </style>
+    <style name="MyButton2" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/teal_200</item>
+        <item name="colorButtonNormal">@color/dorado</item>
+    </style>
+</resources>
