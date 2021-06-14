@@ -74,6 +74,9 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             R.id.invitacion -> {
                 Toast.makeText(this, "elegiste menu invitacion", Toast.LENGTH_LONG).show()
             }
+            R.id.premiun -> {
+                Toast.makeText(this, "elegiste menu premiun", Toast.LENGTH_LONG).show()
+            }
         }
         return true
     }
