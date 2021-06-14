@@ -73,6 +73,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
             // opciones menu lateral
             R.id.invitacion -> {
+                // modificado Toast.makeText(this, "elegiste menu invitacion", Toast.LENGTH_LONG).show()
                 Toast.makeText(this, "elegiste menu invitacion", Toast.LENGTH_LONG).show()
             }
             R.id.premiun -> {
