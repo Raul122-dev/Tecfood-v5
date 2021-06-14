@@ -15,6 +15,7 @@ import com.google.android.material.navigation.NavigationView
 import com.miempresa.tecfoodv5.fragmentos.explorar
 import com.miempresa.tecfoodv5.fragmentos.home
 import com.miempresa.tecfoodv5.fragmentos.listas
+import com.miempresa.tecfoodv5.fragmentos.preferencias
 import eightbitlab.com.blurview.BlurView
 import eightbitlab.com.blurview.RenderScriptBlur
 import kotlinx.android.synthetic.main.activity_main.*
@@ -52,6 +53,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
+            //opciones tab_menu
             R.id.menu_home -> {
                 fragmentShow(home())
             }
@@ -65,8 +67,10 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
             }
             R.id.Preferencias -> {
-
+                fragmentShow(preferencias())
             }
+
+            // opciones menu lateral
             R.id.invitacion -> {
                 Toast.makeText(this, "elegiste menu invitacion", Toast.LENGTH_LONG).show()
             }
