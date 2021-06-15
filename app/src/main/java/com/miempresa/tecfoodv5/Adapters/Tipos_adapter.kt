@@ -1,4 +1,4 @@
-package com.miempresa.tecfoodv5.Explorar.Tipos
+package com.miempresa.tecfoodv5.Adapters
 
 import android.view.LayoutInflater
 import android.view.View

@@ -1,4 +1,4 @@
-package com.miempresa.tecfoodv5.Restaurantes
+package com.miempresa.tecfoodv5.Adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.miempresa.tecfoodv5.R
+import com.miempresa.tecfoodv5.Models.Restaurantes
 import com.squareup.picasso.Picasso
 
 class restaurant_adapter(val restaurantes:ArrayList<Restaurantes>):RecyclerView.Adapter<restaurant_adapter.viewHolder>() {
@@ -19,10 +20,10 @@ class restaurant_adapter(val restaurantes:ArrayList<Restaurantes>):RecyclerView.
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_restaurante,parent,false)
-        return restaurant_adapter.viewHolder(view)
+        return viewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: restaurant_adapter.viewHolder, position: Int) {
+    override fun onBindViewHolder(holder: viewHolder, position: Int) {
         holder.txtNombre_Rest.text = restaurantes[position].nombre_rest
         holder.txtUbicacion.text = restaurantes[position].ubicacion
         holder.txtCalificacion.text = restaurantes[position].calificacion.toString()

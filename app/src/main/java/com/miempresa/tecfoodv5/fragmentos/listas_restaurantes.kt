@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.miempresa.tecfoodv5.R
-import com.miempresa.tecfoodv5.Restaurantes.Restaurantes
-import com.miempresa.tecfoodv5.Restaurantes.restaurant_adapter
+import com.miempresa.tecfoodv5.Models.Restaurantes
+import com.miempresa.tecfoodv5.Adapters.restaurant_adapter
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

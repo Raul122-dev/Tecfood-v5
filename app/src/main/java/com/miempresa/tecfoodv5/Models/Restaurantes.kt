@@ -1,4 +1,4 @@
-package com.miempresa.tecfoodv5.Restaurantes
+package com.miempresa.tecfoodv5.Models
 
 data class Restaurantes(
     val nombre_rest:String,

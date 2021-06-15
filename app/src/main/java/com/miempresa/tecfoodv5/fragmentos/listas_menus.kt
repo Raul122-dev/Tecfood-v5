@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.miempresa.tecfoodv5.Menus.Menus
-import com.miempresa.tecfoodv5.Menus.menus_adapter
+import com.miempresa.tecfoodv5.Models.Menus
+import com.miempresa.tecfoodv5.Adapters.menus_adapter
 import com.miempresa.tecfoodv5.R
 
 // TODO: Rename parameter arguments, choose names that match

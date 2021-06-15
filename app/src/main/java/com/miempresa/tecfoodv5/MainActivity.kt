@@ -2,6 +2,7 @@ package com.miempresa.tecfoodv5
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
+import com.miempresa.tecfoodv5.Connections.Api_Restaurantes
 import com.miempresa.tecfoodv5.fragmentos.explorar
 import com.miempresa.tecfoodv5.fragmentos.home
 import com.miempresa.tecfoodv5.fragmentos.listas
@@ -45,8 +47,8 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         //Abrir Menu
         btn_menu.setOnClickListener(){
             navegacion.openDrawer(GravityCompat.START)
-            blur_fondo.startBlur()
-            blur_fondo.blurRadius = 1
+            //blur_fondo.startBlur()
+            //blur_fondo.blurRadius = 1
         }
 
     }
@@ -65,7 +67,13 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 fragmentShow(explorar())
             }
             R.id.Mas -> {
+                Log.i("mensaje", "hola como estas")
 
+                val Connections = Api_Restaurantes()
+
+                var restaurantes = Connections.Restaurantes_all(this)
+
+                Log.i("mensaje", "nuevo: "+ restaurantes + ".")
             }
             R.id.Preferencias -> {
                 fragmentShow(preferencias())

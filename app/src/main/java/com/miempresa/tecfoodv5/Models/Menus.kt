@@ -1,4 +1,4 @@
-package com.miempresa.tecfoodv5.Menus
+package com.miempresa.tecfoodv5.Models
 
 data class Menus(
     val nombre:String,

@@ -1,4 +1,4 @@
-package com.miempresa.tecfoodv5.Menus
+package com.miempresa.tecfoodv5.Adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.miempresa.tecfoodv5.Models.Menus
 import com.miempresa.tecfoodv5.R
 import com.squareup.picasso.Picasso
 
@@ -24,7 +25,7 @@ class menus_adapter(val menus:ArrayList<Menus>):RecyclerView.Adapter<menus_adapt
         return viewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: menus_adapter.viewHolder, position: Int) {
+    override fun onBindViewHolder(holder: viewHolder, position: Int) {
         holder.txtTitulo.text = menus[position].nombre
         holder.txtRestaurante.text = menus[position].restaurant
         holder.txtPrecio.text = menus[position].precio.toString()
