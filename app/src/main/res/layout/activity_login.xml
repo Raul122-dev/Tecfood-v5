@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activitys.LoginRegister.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_marginTop="50sp"
+            android:layout_width="300sp"
+            android:layout_height="70sp"
+            android:src="@drawable/logo_tecfood"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nos Parecemos a Rapi pero no lo somos"/>
+
+        <ImageView
+            android:layout_marginTop="40sp"
+            android:layout_width="300sp"
+            android:layout_height="150sp"
+            android:src="@drawable/ic_launcher_background"/>
+
+        <Button
+            android:id="@+id/login_phone"
+            android:layout_width="300sp"
+            android:layout_height="65sp"
+            android:layout_marginTop="50sp"
+            android:backgroundTint="@color/teal_200"
+            android:drawableLeft="@android:drawable/ic_dialog_alert"
+            android:padding="10dp"
+            android:text="Continue whit your Phone"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/login_facebook"
+            android:layout_width="300sp"
+            android:layout_height="65sp"
+            android:layout_marginTop="5sp"
+            android:backgroundTint="@color/purple_700"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:padding="10dp"
+            android:text="Continue whit Facebook"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_login_invitado"
+            android:layout_marginTop="5sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/naranja_claro"
+            android:text="Continuar como Invitado"/>
+
+        <ImageButton
+            android:id="@+id/btn_publicity"
+            android:layout_marginTop="25sp"
+            android:layout_width="300sp"
+            android:layout_height="100sp"
+            android:src="@drawable/ic_launcher_background"/>
+
+    </LinearLayout>
+
+</LinearLayout>
