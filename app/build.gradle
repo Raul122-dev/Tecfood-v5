@@ -48,11 +48,14 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
-    implementation 'com.android.volley:volley:1.1.1'
 
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     implementation 'com.google.code.gson:gson:2.8.6'
+
+    implementation 'jp.wasabeef:picasso-transformations:2.4.0'
+    // filtros de Gpu
+    implementation 'jp.co.cyberagent.android:gpuimage:2.1.0'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        tools:context=".MainActivity">
+        tools:context=".Activitys.MainActivity">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -21,15 +21,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
-            <ImageButton
-                android:id="@+id/btn_menu"
-                android:layout_width="40sp"
-                android:layout_height="40sp"
-                android:layout_marginStart="10sp"
-                android:layout_marginTop="10sp"
-                android:background="@null"
-                android:src="@drawable/ic_baseline_menu_24" />
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -43,6 +34,15 @@
                 </FrameLayout>
 
             </ScrollView>
+
+            <ImageButton
+                android:id="@+id/btn_menu"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="10sp"
+                android:background="@null"
+                android:src="@drawable/ic_baseline_menu_24" />
 
         </RelativeLayout>
 

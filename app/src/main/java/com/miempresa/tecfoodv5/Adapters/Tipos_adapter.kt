@@ -11,7 +11,7 @@ import com.miempresa.tecfoodv5.R
 class tipos_adapter(): RecyclerView.Adapter<tipos_adapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val img: ImageView = itemView.findViewById(R.id.img_fondo)
+        val img: ImageView = itemView.findViewById(R.id.img_fondo_tip)
         val txt: TextView = itemView.findViewById(R.id.txt_name_tip)
     }
 

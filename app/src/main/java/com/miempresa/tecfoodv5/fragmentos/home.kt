@@ -1,5 +1,6 @@
 package com.miempresa.tecfoodv5.fragmentos
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,9 +8,20 @@ import android.view.ViewGroup
 import android.view.Window
 import androidx.appcompat.app.WindowDecorActionBar
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.OrientationHelper
+import androidx.recyclerview.widget.RecyclerView
+import com.miempresa.tecfoodv5.Adapters.Restaurante_user
+import com.miempresa.tecfoodv5.Connections.ApiService
+import com.miempresa.tecfoodv5.Models.Restaurante
 import com.miempresa.tecfoodv5.R
 import eightbitlab.com.blurview.BlurView
 import eightbitlab.com.blurview.RenderScriptBlur
+import kotlinx.android.synthetic.main.fragment_home.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -35,11 +47,42 @@ class home : Fragment() {
         }
     }
 
+    @SuppressLint("WrongConstant")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
+
+        val Rc_user = view.findViewById<RecyclerView>(R.id.Rc_user)
+
+        Rc_user.layoutManager = LinearLayoutManager(activity, OrientationHelper.HORIZONTAL, false)
+
+        //Obtener datos de la Api (Restaurantes)
+        val retrofit : Retrofit = Retrofit.Builder()
+            .baseUrl(getString(R.string.urlApi))
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+        val service = retrofit.create<ApiService>(ApiService::class.java)
+
+
+
+        service.getAllRestaurants().enqueue(object : Callback<List<Restaurante>> {
+            override fun onResponse(
+                call: Call<List<Restaurante>>,
+                response: retrofit2.Response<List<Restaurante>>
+            ) {
+                val restaurants = response.body()
+                Rc_user.adapter = Restaurante_user(restaurants as ArrayList<Restaurante>)
+
+                //Log.i("mensaje", Gson().toJson(restaurants))
+            }
+
+            override fun onFailure(call: Call<List<Restaurante>>, t: Throwable) {
+                t.printStackTrace()
+            }
+
+        })
 
         //val layout = view.findViewById<View>(R.id.blur_fondo)
 

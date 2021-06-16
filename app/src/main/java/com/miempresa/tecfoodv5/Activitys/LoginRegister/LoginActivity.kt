@@ -3,7 +3,7 @@ package com.miempresa.tecfoodv5.Activitys.LoginRegister
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.miempresa.tecfoodv5.MainActivity
+import com.miempresa.tecfoodv5.Activitys.MainActivity
 import com.miempresa.tecfoodv5.R
 import kotlinx.android.synthetic.main.activity_login.*
 

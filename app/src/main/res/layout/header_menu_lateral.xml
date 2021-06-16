@@ -9,7 +9,8 @@
         android:id="@+id/fondoBanerMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/wallpaper1"/>
+        android:background="@color/naranja"/>
+
     <!--
     <io.alterac.blurkit.BlurLayout
         android:id="@+id/blur_fondo"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200sp"
+    android:layout_height="150sp"
     android:padding="5sp">
 
     <ImageView
@@ -17,7 +17,7 @@
         android:background="#80000000">
 
         <ImageView
-            android:id="@+id/img_fondo"
+            android:id="@+id/img_fondo_tip"
             android:layout_width="50sp"
             android:layout_height="50sp"
             android:src="@drawable/ic_baseline_apps_24"/>

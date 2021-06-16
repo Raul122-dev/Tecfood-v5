@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragmentos.explorar">
+    tools:context=".fragmentos.explorar"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,10 +37,10 @@
 
         </LinearLayout>
 
-        <!--<androidx.recyclerview.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rc_tipos"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>-->
+            android:layout_height="match_parent"/>
 
     </LinearLayout>
 

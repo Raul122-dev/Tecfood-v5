@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragmentos.home">
 
@@ -21,61 +22,18 @@
             android:layout_margin="20sp"
             android:textColor="#F9B612"/>
 
-        <HorizontalScrollView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="150sp">
-            <LinearLayout
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Rc_user"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="20sp">
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-
-                    </LinearLayout>
-
-                </RelativeLayout>
-
-            </LinearLayout>
-        </HorizontalScrollView>
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -86,109 +44,17 @@
             android:layout_margin="20sp"
             android:textColor="#F9B612"/>
 
-        <HorizontalScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="240sp">
-            <LinearLayout
+            android:layout_height="150sp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Rc_tipos"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_margin="10sp"/>
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="110sp"
-                    android:layout_margin="8sp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-
-                    </LinearLayout>
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="110sp"
-                    android:layout_margin="8sp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-
-                    </LinearLayout>
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-        </HorizontalScrollView>
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -199,61 +65,17 @@
             android:layout_margin="20sp"
             android:textColor="#F9B612"/>
 
-        <HorizontalScrollView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="150sp">
-            <LinearLayout
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Rc_cercano_user"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="20sp">
+                android:layout_margin="10sp"/>
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-                        <ImageView
-                            android:layout_width="100sp"
-                            android:layout_height="100sp"
-                            android:src="@mipmap/ic_launcher"/>
-
-                    </LinearLayout>
-
-                </RelativeLayout>
-
-            </LinearLayout>
-        </HorizontalScrollView>
+        </LinearLayout>
 
     </LinearLayout>
 
