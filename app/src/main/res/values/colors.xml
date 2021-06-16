@@ -20,4 +20,6 @@
     <color name="dorado">#FFD700</color>
     <color name="naranja_claro">#FFA500</color>
     <color name="rojo">#E74C3C</color>
+    <color name="grisCasiBlanco">#F6F6F6</color>
+    <color name="elRealGrisGozu">#E5E5E5</color>
 </resources>

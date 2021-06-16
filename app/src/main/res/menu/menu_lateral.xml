@@ -9,10 +9,10 @@
             android:title="GENERAL">
             <menu>
                 <item
-                    android:id="@+id/invitacion"
+                    android:id="@+id/menuInvitacion"
                     android:title="Invita a tus amigos"/>
                 <item
-                    android:id="@+id/premiun"
+                    android:id="@+id/menuPremiun"
                     android:title="Haste Premiun" />
             </menu>
         </item>

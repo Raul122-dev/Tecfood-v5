@@ -9,14 +9,24 @@
         android:id="@+id/fondoBanerMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/naranja"/>
+        android:background="@drawable/wallpaper1"/>
 
-    <!--
-    <io.alterac.blurkit.BlurLayout
-        android:id="@+id/blur_fondo"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent">
-    </io.alterac.blurkit.BlurLayout> -->
+    <!--<com.jgabrielfreitas.core.BlurImageView
+        android:id="@+id/dogBlurImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:radius="24"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:src="@drawable/little_dog" />-->
+
+    <com.github.mmin18.widget.RealtimeBlurView
+        android:id="@+id/headerMenuImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:realtimeBlurRadius="7dp"
+        app:realtimeOverlayColor="#6000"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,8 +54,9 @@
             android:text="User"
             android:textFontWeight="1730"
             android:textColor="@color/white"
-            android:shadowColor="@color/black"
-            android:shadowRadius="20"
+            android:shadowColor="@color/dorado"
+            android:shadowRadius="30"
+            android:textStyle="bold"
             android:textSize="20sp"/>
 
         <TextView
@@ -58,8 +69,8 @@
             android:textColor="@color/white"
             android:text="informacion adicional"
             android:textSize="15sp"
-            android:shadowColor="@color/black"
-            android:shadowRadius="20"
+            android:shadowColor="@color/dorado"
+            android:shadowRadius="15"
             android:textFontWeight="1000"/>
     </LinearLayout>
 
