@@ -16,6 +16,48 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tecfoodv5">
+
+        <!--Actividad Notificaciones-->
+        <activity android:name=".Activitys.ItemsMenuLateral.MenuNotificaciones.MenuLat_Notificaciones"
+            android:parentActivityName=".Activitys.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activitys.MainActivity" />
+        </activity>
+
+        <!--Actividad dsadasdsa-->
+        <activity android:name=".Activitys.ItemsMenuLateral.MenuInviteFriends.MenuLat_InvitaAmigos"
+            android:parentActivityName=".Activitys.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activitys.MainActivity" />
+        </activity>
+
+        <!--Actividad Informacion Tecfood-->
+        <activity android:name=".Activitys.ItemsMenuLateral.MenuInfoTecfood.MenuLat_InfoTecfood"
+            android:parentActivityName=".Activitys.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activitys.MainActivity" />
+        </activity>
+
+        <!--Actividad Direccion-->
+        <activity android:name=".Activitys.ItemsMenuLateral.MenuDireccion.MenuLat_Direccion"
+            android:parentActivityName=".Activitys.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activitys.MainActivity" />
+        </activity>
+
+        <!--Actividad Afiliar Restaurante-->
+        <activity android:name=".Activitys.ItemsMenuLateral.MenuAfiliarRestaurante.MenuLat_AfiliarRestaurante"
+            android:parentActivityName=".Activitys.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activitys.MainActivity" />
+        </activity>
+
+        <!--Actividad Login-->
         <activity android:name="com.miempresa.tecfoodv5.Activitys.LoginRegister.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,10 +65,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--Actividad Registro Telefono-->
         <activity android:name="com.miempresa.tecfoodv5.Activitys.LoginRegister.RegisterPhoneActivity"></activity>
-        <activity android:name=".Activitys.MainActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        </activity>
+
+        <!--Actividad Principal-->
+        <activity android:name=".Activitys.MainActivity"></activity>
+
+
+        <!--Actividad Restaurante unico-->
         <activity android:name=".Activitys.Restaurante_Uni"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
 
