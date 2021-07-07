@@ -1,5 +1,6 @@
 package com.miempresa.tecfoodv5.Activitys
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -13,6 +14,11 @@ import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import com.google.gson.Gson
+import com.miempresa.tecfoodv5.Activitys.ItemsMenuLateral.MenuAfiliarRestaurante.MenuLat_AfiliarRestaurante
+import com.miempresa.tecfoodv5.Activitys.ItemsMenuLateral.MenuDireccion.MenuLat_Direccion
+import com.miempresa.tecfoodv5.Activitys.ItemsMenuLateral.MenuInfoTecfood.MenuLat_InfoTecfood
+import com.miempresa.tecfoodv5.Activitys.ItemsMenuLateral.MenuInviteFriends.MenuLat_InvitaAmigos
+import com.miempresa.tecfoodv5.Activitys.ItemsMenuLateral.MenuNotificaciones.MenuLat_Notificaciones
 import com.miempresa.tecfoodv5.Connections.ApiService
 import com.miempresa.tecfoodv5.Connections.Api_Restaurantes
 import com.miempresa.tecfoodv5.Models.Restaurante
@@ -54,8 +60,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         //Abrir Menu
         btn_menu.setOnClickListener(){
             navegacion.openDrawer(GravityCompat.START)
-            //blur_fondo.startBlur()
-            //blur_fondo.blurRadius = 1
         }
         // Iniciacion de retrofit
         val retrofit : Retrofit = Retrofit.Builder()
@@ -87,12 +91,28 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             }
 
             // opciones menu lateral
-            R.id.invitacion -> {
-                // modificado Toast.makeText(this, "elegiste menu invitacion", Toast.LENGTH_LONG).show()
-                Toast.makeText(this, "elegiste menu invitacion", Toast.LENGTH_LONG).show()
+            R.id.menuInvitacion -> {
+                val nextActivity = Intent(applicationContext, MenuLat_InvitaAmigos::class.java)
+                startActivity(nextActivity)
             }
-            R.id.premiun -> {
-                Toast.makeText(this, "elegiste menu premiun", Toast.LENGTH_LONG).show()
+            R.id.menuPremiun -> {
+                fragmentShow(preferencias())
+            }
+            R.id.menuDireccion -> {
+                val nextActivity = Intent(applicationContext, MenuLat_Direccion::class.java)
+                startActivity(nextActivity)
+            }
+            R.id.menuMisNotificaciones -> {
+                val nextActivity = Intent(applicationContext, MenuLat_Notificaciones::class.java)
+                startActivity(nextActivity)
+            }
+            R.id.menuAfiliarRestaurante -> {
+                val nextActivity = Intent(applicationContext, MenuLat_AfiliarRestaurante::class.java)
+                startActivity(nextActivity)
+            }
+            R.id.menuAcercaDeTecFood -> {
+                val nextActivity = Intent(applicationContext, MenuLat_InfoTecfood::class.java)
+                startActivity(nextActivity)
             }
         }
         return true
