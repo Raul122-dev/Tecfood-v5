@@ -25,7 +25,6 @@ class Categoria_adapter(val categoria_rest: ArrayList<String>) : RecyclerView.Ad
     override fun onBindViewHolder(holder: Categoria_adapter.ViewHolder, position: Int) {
         holder.txtNombre.text = categoria_rest[position]
 
-
     }
 
     override fun getItemCount() = categoria_rest.size

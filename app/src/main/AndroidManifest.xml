@@ -27,8 +27,7 @@
         <activity android:name=".Activitys.MainActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         </activity>
-        <activity android:name=".Activitys.Restaurante_Uni"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
+        <activity android:name=".Activitys.Restaurante_Uni"></activity>
 
         <meta-data
             android:name="preloaded_fonts"

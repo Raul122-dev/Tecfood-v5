@@ -9,8 +9,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="principal">#FEE00A</color>
-    <color name="secundario">#383838</color>
-    <color name="gris">#E2DDA7</color>
+    <color name="secundario">#E2DDA7</color>
+    <color name="gris">#383838</color>
     <color name="primaryColor">#346D7D</color>
     <color name="primaryDarkColor">#1F515F</color>
     <color name="accentColor">#03A9F4</color>

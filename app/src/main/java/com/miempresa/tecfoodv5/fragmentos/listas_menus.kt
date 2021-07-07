@@ -42,6 +42,7 @@ class listas_menus : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_listas_menus, container, false)
 
         var rvmenus = view.findViewById<RecyclerView>(R.id.rvmenus)
+        /*
         var menus_nuevo =
             Menus("Lomo Saltado", "La Parcera", 20.00,
                 "https://i.pinimg.com/originals/15/0b/e9/150be92048549c934acc6b60270fb7f3.jpg",
@@ -77,7 +78,7 @@ class listas_menus : Fragment() {
 
         rvmenus.layoutManager = LinearLayoutManager(activity)
         rvmenus.adapter = menus_adapter(menus)
-
+        */
         return view
     }
 

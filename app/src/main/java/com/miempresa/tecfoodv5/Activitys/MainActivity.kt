@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             //blur_fondo.startBlur()
             //blur_fondo.blurRadius = 1
         }
-
+        // Iniciacion de retrofit
         val retrofit : Retrofit = Retrofit.Builder()
             .baseUrl("https://www.tecfood.club/74054946816/api/")
             .addConverterFactory(GsonConverterFactory.create())
@@ -133,5 +133,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 Log.i("response", Gson().toJson(restaurants))
             }
         })
+
+
     }
 }

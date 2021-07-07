@@ -26,11 +26,12 @@ class menus_adapter(val menus:ArrayList<Menus>):RecyclerView.Adapter<menus_adapt
     }
 
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
+        /*
         holder.txtTitulo.text = menus[position].nombre
         holder.txtRestaurante.text = menus[position].restaurant
         holder.txtPrecio.text = menus[position].precio.toString()
         Picasso.get().load(menus[position].img_delivery).error(R.drawable.ic_launcher_background).into(holder.img_del)
-        Picasso.get().load(menus[position].img_plato).error(R.drawable.ic_launcher_background).into(holder.img_plato)
+        Picasso.get().load(menus[position].img_plato).error(R.drawable.ic_launcher_background).into(holder.img_plato)*/
 
     }
 

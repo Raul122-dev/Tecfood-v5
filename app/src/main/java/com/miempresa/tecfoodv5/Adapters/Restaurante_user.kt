@@ -16,6 +16,7 @@ import com.miempresa.tecfoodv5.Models.Restaurante
 import com.miempresa.tecfoodv5.R
 import com.squareup.picasso.Picasso
 import com.squareup.picasso.Transformation
+import jp.wasabeef.picasso.transformations.RoundedCornersTransformation
 
 
 class Restaurante_user(val restaurantes: ArrayList<Restaurante>) : RecyclerView.Adapter<Restaurante_user.ViewHolder>() {
@@ -41,7 +42,10 @@ class Restaurante_user(val restaurantes: ArrayList<Restaurante>) : RecyclerView.
 
         holder.itemView.setOnClickListener(){
             var context = holder.itemView.getContext()
+            val model = restaurantes.get(position)
+            var id_rest = model.id.toString()
             val intent = Intent(context, Restaurante_Uni::class.java)
+            intent.putExtra("id_rest", id_rest)
 
             context.startActivity(intent)
         }

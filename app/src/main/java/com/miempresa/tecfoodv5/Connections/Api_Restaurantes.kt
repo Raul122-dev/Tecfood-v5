@@ -1,10 +1,12 @@
 package com.miempresa.tecfoodv5.Connections
 
 
+import android.util.Log
 import com.miempresa.tecfoodv5.Models.Restaurante
 
 import retrofit2.Call
 import retrofit2.Callback
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -37,6 +39,21 @@ class Api_Restaurantes {
 
         })
 
+    }
+
+    fun getRestaurantById(){
+        service.getRestaurantById(5).enqueue(object : Callback<Restaurante>{
+            override fun onResponse(call: Call<Restaurante>, response: Response<Restaurante>) {
+
+                val restauranteU = response.body()
+                Log.i("rest uni: ", restauranteU.toString())
+            }
+
+            override fun onFailure(call: Call<Restaurante>, t: Throwable) {
+                t.printStackTrace()
+            }
+
+        })
     }
 
 }
