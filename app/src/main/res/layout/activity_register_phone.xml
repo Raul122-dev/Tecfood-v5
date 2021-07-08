@@ -15,7 +15,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textSize="25sp"
-            android:text="Agrega tu numero de celular para verificarte"/>
+            android:text="Agrega tu numero de celular para verificarte"
+            android:textColor="@color/naranja_claro"
+            android:textStyle="bold"/>
     </LinearLayout>
 
     <LinearLayout

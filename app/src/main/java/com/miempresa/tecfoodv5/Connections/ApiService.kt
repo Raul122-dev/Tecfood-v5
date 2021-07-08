@@ -18,6 +18,10 @@ interface ApiService {
     @GET("Restaurante/{id}")
     fun getRestaurantById(@Path("id") id: Int): Call<Restaurante>
 
+    //Obtener todos los menus
+    @GET("Menus")
+    fun getAllMenus(): Call<List<Menus>>
+
     //Obtener Menus de Restaurante
     @GET("Menus")
     fun getMenusOfRestaurantById(@Query("restaurante") idRest: Int): Call<Menus>

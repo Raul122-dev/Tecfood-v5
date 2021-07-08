@@ -22,13 +22,15 @@
                 android:layout_width="130sp"
                 android:layout_height="50sp"
                 android:text="Menu"
+                android:textColor="@color/naranja_claro"
                 android:theme="@style/MyButton">
             </Button>
             <Button
                 android:id="@+id/irPrimerFrag2"
-                android:layout_width="130sp"
+                android:layout_width="140sp"
                 android:layout_height="50sp"
                 android:text="Restaurantes"
+                android:textColor="@color/naranja_claro"
                 android:theme="@style/MyButton2">
             </Button>
         </LinearLayout>
@@ -41,5 +43,4 @@
         </FrameLayout>
 
     </LinearLayout>
-
 </FrameLayout>
