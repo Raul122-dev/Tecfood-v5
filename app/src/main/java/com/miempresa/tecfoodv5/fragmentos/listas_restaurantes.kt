@@ -1,6 +1,7 @@
 package com.miempresa.tecfoodv5.fragmentos
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -8,8 +9,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.miempresa.tecfoodv5.R
-import com.miempresa.tecfoodv5.Models.Restaurantes
 import com.miempresa.tecfoodv5.Adapters.restaurant_adapter
+import com.miempresa.tecfoodv5.Connections.ApiService
+import com.miempresa.tecfoodv5.Models.Restaurante
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -38,40 +45,38 @@ class listas_restaurantes : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
         val view: View = inflater.inflate(R.layout.fragment_listas_restaurantes, container, false)
+        val RVrestaurantes = view.findViewById<RecyclerView>(R.id.rvrestaurantes)
 
-        var rvrestaurantes = view.findViewById<RecyclerView>(R.id.rvrestaurantes)
+        //Carga de Layout de RecyclerView
+        RVrestaurantes.layoutManager = LinearLayoutManager(activity)
 
-        var rest_nuevo =
-            Restaurantes("Nueva Palomino", "Yanahuara", 5.0,
-                "https://images.vexels.com/media/users/3/190869/isolated/preview/68208da69d14a72dd02e4e413866ed6f-edificio-ilustraci-oacute-n-plana-restaurante-by-vexels.png")
-        var rest_nuevo1 =
-            Restaurantes("Nueva Palomino", "Yanahuara", 5.0,
-                "https://images.vexels.com/media/users/3/190869/isolated/preview/68208da69d14a72dd02e4e413866ed6f-edificio-ilustraci-oacute-n-plana-restaurante-by-vexels.png")
-        var rest_nuevo2 =
-            Restaurantes("Nueva Palomino", "Yanahuara", 5.0,
-                "https://images.vexels.com/media/users/3/190869/isolated/preview/68208da69d14a72dd02e4e413866ed6f-edificio-ilustraci-oacute-n-plana-restaurante-by-vexels.png")
-        var rest_nuevo3 =
-            Restaurantes("Nueva Palomino", "Yanahuara", 5.0,
-                "https://images.vexels.com/media/users/3/190869/isolated/preview/68208da69d14a72dd02e4e413866ed6f-edificio-ilustraci-oacute-n-plana-restaurante-by-vexels.png")
-        var rest_nuevo4 =
-            Restaurantes("Nueva Palomino", "Yanahuara", 5.0,
-                "https://images.vexels.com/media/users/3/190869/isolated/preview/68208da69d14a72dd02e4e413866ed6f-edificio-ilustraci-oacute-n-plana-restaurante-by-vexels.png")
-        var rest_nuevo5 =
-            Restaurantes("Nueva Palomino", "Yanahuara", 5.0,
-                "https://images.vexels.com/media/users/3/190869/isolated/preview/68208da69d14a72dd02e4e413866ed6f-edificio-ilustraci-oacute-n-plana-restaurante-by-vexels.png")
+        //Obtener datos de la Api (Restaurantes)
+        val retrofit : Retrofit = Retrofit.Builder()
+            .baseUrl(getString(R.string.urlApi))
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+        val service = retrofit.create<ApiService>(ApiService::class.java)
 
-        val restaurantes = ArrayList<Restaurantes>()
-        restaurantes.add(rest_nuevo)
-        restaurantes.add(rest_nuevo1)
-        restaurantes.add(rest_nuevo2)
-        restaurantes.add(rest_nuevo3)
-        restaurantes.add(rest_nuevo4)
-        restaurantes.add(rest_nuevo5)
+        service.getAllRestaurants().enqueue(object : Callback<List<Restaurante>>{
+            override fun onResponse(
+                call: Call<List<Restaurante>>,
+                response: retrofit2.Response<List<Restaurante>>
+            ) {
+                val restaurants = response.body()
+                RVrestaurantes.adapter = restaurant_adapter(restaurants as ArrayList<Restaurante>)
+            }
 
-        rvrestaurantes.layoutManager = LinearLayoutManager(activity)
-        rvrestaurantes.adapter = restaurant_adapter(restaurantes)
+            override fun onFailure(call: Call<List<Restaurante>>, t: Throwable) {
+                t.printStackTrace()
+            }
+
+        })
+
+
+        //rvrestaurantes.adapter = restaurant_adapter(restaurantes)
 
         return view
     }
@@ -96,3 +101,5 @@ class listas_restaurantes : Fragment() {
             }
     }
 }
+
+

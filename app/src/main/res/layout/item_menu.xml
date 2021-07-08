@@ -22,7 +22,7 @@
 
             <TextView
                 android:id="@+id/t1"
-                android:layout_width="wrap_content"
+                android:layout_width="230sp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10sp"
                 android:layout_marginTop="5sp"

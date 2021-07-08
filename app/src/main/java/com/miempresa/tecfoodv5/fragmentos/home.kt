@@ -85,10 +85,7 @@ class home : Fragment() {
         })
 
         //val layout = view.findViewById<View>(R.id.blur_fondo)
-
         //blurView = view.findViewById<BlurView>(R.id.blur_fondo)
-
-
         //layout.background.setAlpha(100)
 
         return view
