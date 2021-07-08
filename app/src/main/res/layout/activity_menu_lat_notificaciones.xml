@@ -6,6 +6,49 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Activitys.ItemsMenuLateral.MenuNotificaciones.MenuLat_Notificaciones">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/Nombre_Rest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/coiny"
+            android:gravity="center"
+            android:text="Mis Notificaciones"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:paddingTop="10sp"
+            android:background="@color/grisCasiBlanco"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="3sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="15sp"
+            android:background="@color/dorado" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="chekea tus notificaciones subnormal, si no hay ni pincho, ingnore comentario"
+            android:textStyle="italic"
+            android:textSize="15sp"
+            android:layout_marginTop="10sp"
+            android:padding="10sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaNotificaciones"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15sp"/>
+    </LinearLayout>
+
+
     <ImageButton
         android:id="@+id/buttonVolverMenu"
         android:layout_width="wrap_content"

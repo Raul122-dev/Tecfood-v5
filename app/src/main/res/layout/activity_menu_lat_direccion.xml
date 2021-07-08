@@ -8,83 +8,85 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:orientation="vertical">
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/Nombre_Rest"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Agrega o escoge una \n direccion"
+            android:fontFamily="@font/coiny"
             android:gravity="center"
-            android:padding="8sp"
-            android:textSize="22sp"
-            android:layout_marginTop="35sp"
+            android:text="Agrega o Escoge \n una Direccion"
             android:textColor="@color/black"
+            android:textSize="25sp"
             android:textStyle="bold"
-            android:background="@color/elRealGrisGozu">
-        </TextView>
+            android:paddingTop="10sp"
+            android:background="@color/grisCasiBlanco"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="5sp"
-            android:layout_marginLeft="40sp"
-            android:layout_marginRight="40sp"
+            android:layout_height="3sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
             android:layout_marginTop="15sp"
             android:layout_marginBottom="15sp"
-            android:background="@color/elRealGrisGozu" />
-
-        <EditText
-            android:id="@+id/lgCorreo"
-            android:layout_width="match_parent"
-            android:layout_height="60sp"
-            android:layout_marginLeft="30sp"
-            android:layout_marginRight="30sp"
-            android:paddingLeft="45sp"
-            android:background="@drawable/input_style_edit_text"
-            android:inputType="textEmailAddress"
-            android:textSize="15sp"
-            android:hint="Ingresa una direccion de entrega" />
-
-        <ImageView
-            android:layout_width="24sp"
-            android:layout_height="24sp"
-            android:layout_marginTop="-41sp"
-            android:layout_marginLeft="-125sp"
-            android:src="@drawable/icon_search">
-        </ImageView>
+            android:background="@color/dorado" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30sp"
             android:orientation="horizontal"
-            android:paddingLeft="30dp">
-
-            <ImageView
-                android:layout_width="35sp"
-                android:layout_height="35sp"
-                android:layout_gravity="center_vertical"
-                android:background="@android:color/transparent"
-                android:padding="5sp"
-                android:src="@drawable/icon_place"></ImageView>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="35sp"
-                android:layout_gravity="center_vertical"
-                android:backgroundTint="@color/grisCasiBlanco"
-                android:paddingTop="0sp"
-                android:paddingBottom="0sp"
-                android:text="Ubicacion Actual"
-                android:textColor="@color/black"
-                android:textSize="10sp"></Button>
+            android:gravity="center_vertical">
+            <LinearLayout
+                android:layout_width="310sp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/input_style_edit_text"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="5sp">
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:src="@drawable/icon_search"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginRight="5sp"/>
+                <EditText
+                    android:id="@+id/lgCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:inputType="textEmailAddress"
+                    android:textSize="15sp"
+                    android:layout_marginRight="10sp"
+                    android:hint="Ingresa una direccion de entrega" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_marginEnd="10sp"
+                android:background="@drawable/theme_esquinas_redondeadas">
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:background="@android:color/transparent"
+                    android:padding="5sp"
+                    android:src="@drawable/icon_place" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="Mi ubicacion"/>
+            </LinearLayout>
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listaDirecciones"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="15sp"
-            android:layout_marginLeft="10sp"
-            android:layout_marginRight="10sp"/>
+            android:layout_marginTop="15sp"/>
     </LinearLayout>
 
     <ImageButton

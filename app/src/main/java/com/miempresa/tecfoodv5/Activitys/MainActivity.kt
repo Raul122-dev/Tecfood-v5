@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.view.GravityCompat
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -30,6 +31,7 @@ import com.miempresa.tecfoodv5.fragmentos.preferencias
 import eightbitlab.com.blurview.BlurView
 import eightbitlab.com.blurview.RenderScriptBlur
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.header_menu_lateral.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Retrofit
@@ -60,7 +62,22 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         //Abrir Menu
         btn_menu.setOnClickListener(){
             navegacion.openDrawer(GravityCompat.START)
+
+            btnInviteFriends.setOnClickListener(){
+                Toast.makeText(this, "Link de invitacion copiado", Toast.LENGTH_LONG).show()
+                navegacion.closeDrawer(GravityCompat.START)
+            }
+
+            btn_menu_hacerse_premium.setOnClickListener(View.OnClickListener {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.Page_main, preferencias())
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .commit()
+
+                navegacion.closeDrawer(GravityCompat.START)
+            })
         }
+
         // Iniciacion de retrofit
         val retrofit : Retrofit = Retrofit.Builder()
             .baseUrl("https://www.tecfood.club/74054946816/api/")
@@ -91,13 +108,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             }
 
             // opciones menu lateral
-            R.id.menuInvitacion -> {
-                val nextActivity = Intent(applicationContext, MenuLat_InvitaAmigos::class.java)
-                startActivity(nextActivity)
-            }
-            R.id.menuPremiun -> {
-                fragmentShow(preferencias())
-            }
+            //borramos invitacion y hacerse premium
             R.id.menuDireccion -> {
                 val nextActivity = Intent(applicationContext, MenuLat_Direccion::class.java)
                 startActivity(nextActivity)

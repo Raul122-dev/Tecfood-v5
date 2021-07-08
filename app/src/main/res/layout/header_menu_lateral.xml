@@ -3,75 +3,137 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="200sp">
+    android:layout_height="370sp">
 
     <ImageView
         android:id="@+id/fondoBanerMenu"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="200sp"
         android:background="@drawable/wallpaper1"/>
-
-    <!--<com.jgabrielfreitas.core.BlurImageView
-        android:id="@+id/dogBlurImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        app:radius="24"
-        android:layout_margin="@dimen/activity_horizontal_margin"
-        android:src="@drawable/little_dog" />-->
 
     <com.github.mmin18.widget.RealtimeBlurView
         android:id="@+id/headerMenuImg"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:realtimeBlurRadius="7dp"
-        app:realtimeOverlayColor="#6000"/>
+        android:layout_height="200sp"
+        app:realtimeBlurRadius="10dp"
+        app:realtimeOverlayColor="#7000"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ic_launcher_background"
-            android:layout_marginTop="24dp"
-            android:layout_marginStart="24dp"
-            app:civ_border_color="@color/principal"
-            app:civ_border_width="1sp"
-            android:layout_marginEnd="24dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <TextView
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_launcher_background"
+                app:civ_border_color="@color/principal"
+                app:civ_border_width="2sp"
+                app:civ_border_overlay="true" />
+
+            <ImageButton
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:layout_marginStart="-10sp"
+                android:layout_marginTop="104sp"
+                android:background="@null"
+                android:src="@drawable/icon_btn_editar" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:textAppearance="?attr/textAppearanceHeadline6"
-            android:text="User"
-            android:textFontWeight="1730"
-            android:textColor="@color/white"
-            android:shadowColor="@color/dorado"
-            android:shadowRadius="30"
-            android:textStyle="bold"
-            android:textSize="20sp"/>
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="24dp"
+                android:shadowColor="@color/dorado"
+                android:shadowRadius="30"
+                android:text="User"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="@color/white"
+                android:textFontWeight="1730"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24sp"
+                android:layout_marginEnd="24sp"
+                android:layout_marginBottom="14sp"
+                android:shadowColor="@color/dorado"
+                android:shadowRadius="20"
+                android:text="informacion adicional"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@color/white"
+                android:textFontWeight="1000"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="14sp"
-            android:layout_marginStart="24sp"
-            android:layout_marginEnd="24sp"
-            android:textAppearance="?attr/textAppearanceBody2"
-            android:textColor="@color/white"
-            android:text="informacion adicional"
-            android:textSize="15sp"
-            android:shadowColor="@color/dorado"
-            android:shadowRadius="15"
-            android:textFontWeight="1000"/>
+            android:orientation="vertical"
+            android:padding="10sp">
+
+            <ImageButton
+                android:id="@+id/btnInviteFriends"
+                android:layout_width="match_parent"
+                android:layout_height="80sp"
+                android:background="@drawable/invite_friends_new"
+                android:scaleType="fitXY" />
+            <!--<Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Haste Premiun"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textSize="17sp">
+            </Button>-->
+            <LinearLayout
+                android:id="@+id/btn_menu_hacerse_premium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tab_corners_shape"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="15sp"
+                android:layout_marginTop="15sp"
+                android:weightSum="2">
+x
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¡HASTE PREMIUM!"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textSize="17sp">
+                </TextView>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_launcher_background"
+                    app:civ_border_color="@color/principal"
+                    app:civ_border_width="2sp"
+                    app:civ_border_overlay="true"
+                    android:outlineSpotShadowColor="@color/dorado" />
+            </LinearLayout>
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </RelativeLayout>

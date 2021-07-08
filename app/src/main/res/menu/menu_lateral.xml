@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <group
-        android:id="@+id/group1"
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/item_general"
-            android:title="GENERAL">
-            <menu>
-                <item
-                    android:id="@+id/menuInvitacion"
-                    android:title="Invita a tus amigos"/>
-                <item
-                    android:id="@+id/menuPremiun"
-                    android:title="Haste Premiun" />
-            </menu>
-        </item>
-    </group>
 
     <group
         android:id="@+id/grupo2"
