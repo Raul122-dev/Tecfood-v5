@@ -11,7 +11,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.gms.maps.MapFragment
 import com.miempresa.tecfoodv5.Adapters.menus.menu_card_adapter
 import com.miempresa.tecfoodv5.Connections.ApiService
 import com.miempresa.tecfoodv5.Models.Menus
@@ -94,6 +97,11 @@ class Restaurante_Uni : AppCompatActivity() {
         btn_to_return.setOnClickListener(){
             onBackPressed()
         }
+
+        //Mapa de Restaurante
+        val mpa_rest = com.miempresa.tecfoodv5.fragmentos.MapFragment()
+        fragmentShow(mpa_rest)
+
     }
 
     fun data_menus(){
@@ -115,6 +123,11 @@ class Restaurante_Uni : AppCompatActivity() {
         })
 
 
+    }
+
+    fun fragmentShow(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().replace(R.id.frame_layout, fragment).setTransition(
+                FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit()
     }
 
 }

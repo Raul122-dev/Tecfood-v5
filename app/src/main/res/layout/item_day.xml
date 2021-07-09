@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bacg_card">
+
+    <Button
+        android:id="@+id/btn_day"
+        android:layout_width="90sp"
+        android:layout_height="40sp"
+        android:backgroundTint="@color/naranja_claro"
+        android:text="Miercoles"
+        android:textColor="@color/black"
+        android:textSize="9sp"
+        android:layout_margin="5sp"/>
+
+</LinearLayout>

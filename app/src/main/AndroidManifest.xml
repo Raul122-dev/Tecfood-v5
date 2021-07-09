@@ -4,6 +4,8 @@
     package="com.miempresa.tecfoodv5">
 
     <!--Permissions-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -16,6 +18,10 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tecfoodv5">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCWSfM5QIOM_t_xs546tQIN4dl_eZlOpe4" />
 
         <!--Actividad Notificaciones-->
         <activity android:name=".Activitys.ItemsMenuLateral.MenuNotificaciones.MenuLat_Notificaciones"
