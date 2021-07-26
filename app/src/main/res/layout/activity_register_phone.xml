@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textSize="25sp"
-            android:text="Agrega tu numero de celular para verificarte"
+            android:text="Logeo de Prueba para el tecfood oficial"
             android:textColor="@color/naranja_claro"
             android:textStyle="bold"/>
     </LinearLayout>
@@ -25,31 +25,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20sp"
-        android:orientation="horizontal">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginRight="5sp"
-            android:src="@drawable/ic_launcher_background"/>
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txt_pais_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:layout_gravity="center_vertical"
-            android:text="+51"/>
+            android:text="Usuario"/>
 
         <EditText
-            android:id="@+id/edit_txt_phone"
+            android:id="@+id/txt_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:ems="10"
-            android:inputType="number"
-            android:text="Your Phone Number" />
+            android:ems="10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Contraseña"/>
+
+        <EditText
+            android:id="@+id/txt_contraseña"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"/>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Loguearse" />
 
     </LinearLayout>
 
