@@ -8,14 +8,17 @@ import retrofit2.converter.gson.GsonConverterFactory
 class ApiLogueo {
 
     fun getRetrofit():Retrofit{
-          val httpLoggingInterceptor : HttpLoggingInterceptor =  HttpLoggingInterceptor();
+
+          val httpLoggingInterceptor =  HttpLoggingInterceptor()
           httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
 
-          val okHttpClient:OkHttpClient = OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build();
+          val okHttpClient:OkHttpClient = OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build()
+
+
 
           val retrofit:Retrofit = Retrofit.Builder()
               .addConverterFactory(GsonConverterFactory.create())
-              .baseUrl("https://www.tecfood.club/api/")
+              .baseUrl("https://www.tecfood.club/")
               .client(okHttpClient)
               .build();
 

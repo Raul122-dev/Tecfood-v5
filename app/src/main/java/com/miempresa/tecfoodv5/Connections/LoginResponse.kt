@@ -1,10 +1,10 @@
 package com.miempresa.tecfoodv5.Connections;
 
-import java.io.Serializable;
+import kotlinx.serialization.Serializable
 
-class LoginResponse:Serializable {
-     val user_id: String = "";
-     val email: String = "";
-     val username: String = "";
 
-}
+@Serializable
+data class LoginResponse (
+     val id: Int,
+     val email: String,
+     val username: String,)

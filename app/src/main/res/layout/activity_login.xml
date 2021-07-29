@@ -62,6 +62,14 @@
             android:text="Continuar como Invitado"
             android:textStyle="bold"/>
 
+        <TextView
+            android:id="@+id/txt_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/naranja_claro"
+            android:textSize="18sp"
+            android:text="Registrarse"/>
+
         <ImageButton
             android:id="@+id/btn_publicity"
             android:layout_marginTop="25sp"

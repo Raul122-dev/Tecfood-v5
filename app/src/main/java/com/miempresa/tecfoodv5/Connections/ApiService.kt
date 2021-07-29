@@ -4,9 +4,7 @@ import com.miempresa.tecfoodv5.Models.Menus
 import com.miempresa.tecfoodv5.Models.Perfil
 import com.miempresa.tecfoodv5.Models.Restaurante
 import retrofit2.Call
-import retrofit2.http.GET
-import retrofit2.http.Path
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface ApiService {
 
@@ -29,5 +27,8 @@ interface ApiService {
     //Obtener Perfil_User
     @GET("Perfil/{id}")
     fun getPerfilUser(@Path("id") id: Int): Call<Perfil>
+
+    @POST("Perfil/")
+    fun registerPosts(@Body registerPerfilRequest:RegisterPerfilRequest):Call<RegisterPerfilResponse>;
 
 }

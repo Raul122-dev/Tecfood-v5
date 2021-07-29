@@ -18,8 +18,16 @@ class LoginActivity : AppCompatActivity() {
             finish()
         }
 
+        //Para el Login
         login_phone.setOnClickListener(){
             val intent = Intent(this, RegisterPhoneActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        //Para el registro
+        txt_register.setOnClickListener(){
+            val intent = Intent(this, RegisterFormActivity::class.java)
             startActivity(intent)
             finish()
         }

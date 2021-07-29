@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -42,17 +43,18 @@ class RegisterPhoneActivity : AppCompatActivity() {
 
     }
     fun loginUser(loginRequest: LoginRequest) {
+
         val loginResponseCall: Call<LoginResponse> = ApiLogueo().getService().loginUser(loginRequest)
         loginResponseCall.enqueue(object : Callback<LoginResponse> {
-
-
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                 if (response.isSuccessful()){
+
                     val loginResponse : LoginResponse? = response.body()
 
                     val intent = Intent(this@RegisterPhoneActivity, MainActivity::class.java)
                     startActivity(intent)
                     finish()
+
                 }else{
                     var message = "Un error a ocurrido";
                     Toast.makeText(this@RegisterPhoneActivity, message, Toast.LENGTH_SHORT).show();
@@ -64,6 +66,7 @@ class RegisterPhoneActivity : AppCompatActivity() {
                 Toast.makeText(this@RegisterPhoneActivity, message, Toast.LENGTH_SHORT).show();
             }
         })
+
     }
 
 }
